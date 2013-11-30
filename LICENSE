@@ -1,7 +1,41 @@
-GNU GENERAL PUBLIC LICENSE
+Copyright (c) 2013 Celeron @ http://we.easyelectronics.ru/my/Celeron/
+
+
+-----------------------------------------------------------------------------
+ANNOTATION AND EXPLANATION:
+/* Note: This section is just explanation, without legal effect. See below, original GNU GPL text for a legal regulation. */
+
+
+This code distribution have provided FOR EDUCATIONAL PURPOSE only!
+It is not intended for supporting proprietary and/or commercial uses and products.
+So, GNU GENERAL PUBLIC LICENSE v3 (copyleft license) have chosen for it.
+
+You still permitted to some Commercial Uses of this code, as parts in your projects, but with significant exceptions: if you use ANY PART of this code in your proprietary (not open source) project, and then release it to public [for sale], you have to share whole source code of your firmware and provide it free (under GPLv3 license) with your devices (or to make it available free, e.g. through Internet, and keep users/customers informed about it)! 
+So, because of the "copyleft virus", those conditions requires you to FREE YOUR OWN software also, to everyone could redistribute and change it... So, you lose your proprietary. Warning: It could be undesirable or not acceptable for you, in some cases! (usually, embedded firmware is closed)
+
+However, you could solely use any parts or any modification of this code (for educational purpose or for useful home devices), until you release this software to a public.
+Then, when you release your combined (so named "modified version") software/devices to a public (for sale or just for fun), also, you have to provide whole firmware code source free (under GPLv3 license).
+
+
+
+Some external third-party code does not come within GPL conditions! It have used in project and provided here only for your convenience (treat it apart of distribution):
+
+	<avr204.inc> - patched Atmel's standart library (appnote). It was distributed under its own proprietary license: "Atmel grants to Buyer a non-exclusive, nontransferable, non-sublicensable, limited license to..." http://www.atmel.com/about/terms.aspx#body_5
+
+	<macrobaselib.inc> - "Base Macros Library", which enhance standart "AVR Instruction Set". It is shared under permissive "MIT license" (tolerant to proprietary use). Get code at https://github.com/Celeron/avrasm-macrobaselib
+
+	<celeronkeyinputlib.inc> - "Intellectual Key Handling" library. It is shared under permissive "MIT license" (tolerant to proprietary use). Get code at https://github.com/Celeron/avrasm-celeronkeyinputlib
+
+
+Note for newbies: You may also use "NewProjectTemplate" to kick-start a new project. It is shared under permissive "MIT license" (tolerant to proprietary use). Get code at https://github.com/Celeron/avrasm-NewProjectTemplate
+
+
+-----------------------------------------------------------------------------
+
+                    GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
- Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+ Copyright (C) 2007 Free Software Foundation, Inc. [http://fsf.org/]
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 
@@ -645,7 +679,7 @@ the "copyright" line and a pointer to where the full notice is found.
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    along with this program.  If not, see [http://www.gnu.org/licenses/].
 
 Also add information on how to contact you by electronic and paper mail.
 
@@ -664,11 +698,11 @@ might be different; for a GUI interface, you would use an "about box".
   You should also get your employer (if you work as a programmer) or school,
 if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU GPL, see
-<http://www.gnu.org/licenses/>.
+[http://www.gnu.org/licenses/].
 
   The GNU General Public License does not permit incorporating your program
 into proprietary programs.  If your program is a subroutine library, you
 may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
-<http://www.gnu.org/philosophy/why-not-lgpl.html>.
+[http://www.gnu.org/philosophy/why-not-lgpl.html].
