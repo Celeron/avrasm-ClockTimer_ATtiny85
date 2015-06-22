@@ -724,7 +724,9 @@ SWITCH_MODES:
 		;** Управление функцией "ALARM":
 	ControlAlarm__SWITCH_MODES:
 		IF_CURRENT_FUNCTION	FunctionALARM
-		BRNE	EndControlAlarm__SWITCH_MODES
+		BREQ	ControlAlarm1__SWITCH_MODES
+		RJMP	EndControlAlarm__SWITCH_MODES
+	ControlAlarm1__SWITCH_MODES:
 
 		IF_BUTTON_HAVE_STATUS	DButtonSetStatus,	BSC_LongHold
 		OR_BUTTON_HAVE_STATUS	DButtonStartStatus,	BSC_LongHold
@@ -738,17 +740,15 @@ SWITCH_MODES:
 		RJMP	EventMuteAlarm__SWITCH_MODES
 		
 	ControlAlarm2__SWITCH_MODES:
-		IF_BUTTON_HAVE_STATUS	DButtonSetStatus,	BSC_ShortPress
-		BRTC	ControlAlarm3__SWITCH_MODES				; если кнопки не были нажаты...
-		OUTI	DButtonSetStatus,	0b11111111			; После обработки состояния кнопки - сделать "ОТЛОЖЕННЫЙ СБРОС" её статусного регистра.
-		INVB	DAlarm_Mode,	MODE_ENABLED				; Прикладная реакция: переключить режим Будильника = вкл./выкл.
-		RJMP	EventMuteAlarm__SWITCH_MODES
-
-	ControlAlarm3__SWITCH_MODES:
 		IF_BUTTON_HAVE_STATUS	DButtonStartStatus,	BSC_ShortPress
+		OR_BUTTON_HAVE_STATUS	DButtonSetStatus,	BSC_ShortPress
 		BRTC	EndControlAlarm__SWITCH_MODES				; если кнопки не были нажаты...
 		OUTI	DButtonStartStatus,	0b11111111			; После обработки состояния кнопки - сделать "ОТЛОЖЕННЫЙ СБРОС" её статусного регистра.
-		RJMP	EventMuteAlarm__SWITCH_MODES				; Прикладной реакции здесь нет! Смысл: глушить "зуммер" большой кнопкой.
+		OUTI	DButtonSetStatus,	0b11111111
+		STOREB	DAlarm_Mode,	MODE_BELLRINGING			; Флаг "гудок будильника звонит" -> T
+		BRTS	EventMuteAlarm__SWITCH_MODES				; Если гудок звонит, то особой прикладной реакции нет - только заглушить "зуммер"...
+		INVB	DAlarm_Mode,	MODE_ENABLED				; Прикладная реакция: переключить режим Будильника = вкл./выкл.
+		RJMP	EventMuteAlarm__SWITCH_MODES
 
 	EndControlAlarm__SWITCH_MODES:
 
@@ -841,7 +841,7 @@ SWITCH_TIMER_MODES:
 		LDD	temp1,	Y+1						; загрузить байт "Секунды"
 		LDD	temp2,	Y+2						; загрузить байт "Минуты"
 		OR	temp1,	temp2
-		LDD	temp2,	Y+2						; загрузить байт "Часы"
+		LDD	temp2,	Y+3						; загрузить байт "Часы"
 		OR	temp1,	temp2
 		BRNE	AllowStartStop__SWITCH_TIMER_MODES			; если "счётчик времени" <> 0?	то разрешить...
 		SET								; T=1 (выходной параметр процедуры)
