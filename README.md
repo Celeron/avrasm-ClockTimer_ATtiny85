@@ -5,4 +5,4 @@ FIRMWARE для "Мои поделки: Часы-таймер-секундоме
 
 Автор: Celeron
 
-Описание: http://we.easyelectronics.ru/Celeron/moi-podelki-chasy-budilnik-taymer-sekundomer-na-mk-attiny85v-may-oktyabr-2013.html
+Описание: http://inventproject.info/blog/moi-podelki-chasy-budilnik-tajmer-sekundomer-na-mk-attiny85v-maj-oktyabr-2013/

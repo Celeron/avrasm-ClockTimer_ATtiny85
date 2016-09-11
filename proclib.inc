@@ -298,5 +298,5 @@ RESET_TIMER0:
 
 
 ;=== END "proclib.inc" =====================================================
-; coded by (c) Celeron, 2013 @ http://we.easyelectronics.ru/my/Celeron/
+; coded by (c) Celeron, 2013  http://inventproject.info/
 .ENDIF

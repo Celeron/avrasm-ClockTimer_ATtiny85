@@ -925,5 +925,5 @@ End__SLEEPER_SECOND_ELAPSED:
 
 
 ;=== END "procDisplayOutput.inc" ===========================================
-; coded by (c) Celeron, 2013 @ http://we.easyelectronics.ru/my/Celeron/
+; coded by (c) Celeron, 2013  http://inventproject.info/
 .ENDIF

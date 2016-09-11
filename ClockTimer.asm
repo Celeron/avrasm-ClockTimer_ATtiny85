@@ -1138,4 +1138,4 @@ SWITCH_MODE_SETTINGS:
 
 
 ;***** END Procedures section 
-; coded by (c) Celeron, 2013 @ http://we.easyelectronics.ru/my/Celeron/
+; coded by (c) Celeron, 2013  http://inventproject.info/
